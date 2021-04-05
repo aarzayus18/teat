@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t aarzayus18/node .
-  - docker images aarzayus18/node
+  - docker build -t aarzayus/node .
+  - docker images aarzayus/node
 before_deploy:
   -docker login -u aarzayus -p @Dry185252
 deploy:
