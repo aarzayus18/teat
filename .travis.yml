@@ -5,3 +5,10 @@ services:
 script:
   - docker build -t aarzayus18/node .
   - docker images aarzayus18/node
+before_deploy:
+  -docker login -u aarzayus -p @Dry185252
+deploy:
+  provider: script
+  script: docker push aarzayus/node
+  on:
+    branch: master
